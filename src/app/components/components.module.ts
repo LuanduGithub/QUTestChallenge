@@ -17,12 +17,14 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
+
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SplitPipe } from './../core/pipes/split.pipe';
 import { CharactersComponent } from './characters/characters.component';
+import { MatSortModule } from '@angular/material/sort';
 @NgModule({
     imports: [
         CommonModule,
@@ -41,7 +43,8 @@ import { CharactersComponent } from './characters/characters.component';
         MatSnackBarModule,
         MatTableModule,
         MatButtonModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatSortModule
     ],
     declarations: [
         SplitPipe,
