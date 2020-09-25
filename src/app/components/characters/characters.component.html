@@ -1,0 +1,12 @@
+<app-spinner class="spinner-component" *ngIf="spinner"></app-spinner>
+<div class="character" *ngIf="characters">
+
+    <button class="character-button" mat-stroked-button color="basic" matTooltip="{{characters.height}} cm" matTooltipPosition="above">
+        <img src="./../../../../assets/male.png" *ngIf="characters.gender === 'male'" />
+        <img src="./../../../../assets/female.png" *ngIf="characters.gender === 'female'" />
+        <img src="./../../../../assets/robot.png" *ngIf="characters.gender === 'n/a'" />
+        <img src="./../../../../assets/default.png" *ngIf="characters.gender !== 'n/a' && characters.gender !== 'male' && characters.gender !== 'female'" />
+    </button>
+    <h5>{{characters.name}}</h5>
+
+</div>

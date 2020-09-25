@@ -1,0 +1,10 @@
+<app-spinner class="spinner" *ngIf="spinner"></app-spinner>
+<app-header></app-header>
+<div class="home-button-container">
+    <button mat-flat-button color="warn" (click)="getPlanets()">Planets</button>
+    <button mat-flat-button color="accent" (click)="getPeople()">Characters</button>
+</div>
+
+<h3>Click on one of the Films Apparences to see the detailed information</h3>
+<app-table [data]='data' [columns]="columns" [columnsName]="columnsName" *ngIf="showTable"></app-table>
+<app-footer></app-footer>

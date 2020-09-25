@@ -1,0 +1,40 @@
+.grid-film {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    background: #424242;
+    padding: 15px 20px;
+    color:#fff;
+    margin-bottom: 60px;
+    &__img {
+        padding:0 15px
+    }
+    &__info {
+        padding:0 15px;
+        p{
+            max-width: 500px;
+            line-height: 26px;
+        }
+        button{
+            margin: 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .grid-film {
+        display: block;
+        &__img {
+            padding:0 15px
+        }
+        &__info {
+            padding:0 15px;
+            p{
+                max-width: 500px;
+                line-height: 26px;
+            }
+            button{
+                margin: 10px 0;
+            }
+        }
+    }
+}

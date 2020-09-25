@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Angular Material
+This project ar build using component from angular material 9.2.4
+
+
+## Folder Structure
+The folder structure follow the navigation flow so in order to find the film section you shoud follow the url 
+i.e http://localhost:4200/home/film
+you will be availble to find the folder this way 'app/home/film'. Each module have its own services and models folders, containing data that belong only to that module.
+
+The components that are common to all sections are in the components folder managed for one only module.
+
+The core folder contains the pipes, the common services and the animations

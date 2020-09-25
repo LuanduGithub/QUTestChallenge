@@ -1,0 +1,29 @@
+<app-spinner class="spinner" *ngIf="spinner"></app-spinner>
+<app-header></app-header>
+<div class="grid-film" *ngIf="filmData">
+    <div class="grid-film__img">
+        <img src="./../../../assets/poster-placeholder.png" />
+    </div>
+    <div class="grid-film__info">
+        <h2><small>Film: </small>{{filmData.title}} - {{filmData.episode_id}}</h2>
+        <h4><small>Director: </small>{{filmData.director}}</h4>
+        <h4><small>Release Date: </small>{{filmData.release_date | date:'shortDate'}}</h4>
+        <h4><small>Producer: </small>{{filmData.producer}}</h4>
+        <mat-divider></mat-divider>
+        <h2>Opening Crawl</h2>
+        <p>
+            {{filmData.opening_crawl}}
+        </p>
+        <mat-divider></mat-divider>
+        <h2>Characters</h2>
+        <div *ngFor="let character of filmData.characters" style="display: inline-block;vertical-align:top;">
+            <app-characters [url]="character"></app-characters>
+        </div>
+        <mat-divider></mat-divider>
+        <button mat-flat-button color="accent" (click)="back()">Back to List</button>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>
